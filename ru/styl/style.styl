@@ -1,0 +1,2656 @@
+$white = #ffffff
+$black = #121214
+$grey = #adadad
+
+$iphone = "only screen and (max-width: 320px)";
+$phoneSE = "only screen and (max-width: 400px)";
+$phone = "only screen and (max-width: 480px)";
+$phoneAl = "only screen and (max-width: 600px)";
+$tablet = "only screen and (max-width: 768px)";
+$ultra1 = "only screen and (max-width: 992px)";
+$tabletW = "only screen and (max-width: 990px)";
+$ultra = "only screen and (max-width: 1024px)";
+$s1100 = "only screen and (max-width: 1100px)";
+$s1200 = "only screen and (max-width: 1280px)";
+$s1360 = "only screen and (max-width: 1360px)";
+$laptop = "only screen and (max-width: 1400px)";
+$laptop1 = "only screen and (max-width: 1440px)";
+
+*
+	box-sizing border-box
+	outline none
+body
+	font-family 'Open Sans', sans-serif
+	background-color $white
+
+a
+	text-decoration none
+ul
+	list-style none
+	
+h1,h2,h3,h4,h5,h6,p,span,ul
+	padding 0
+	margin 0
+	color $white
+	
+.container
+	position relative
+	@media $laptop
+		width 1170px
+	@media $ultra
+		width 990px
+	@media $tablet
+		width 744px
+	@media $phone
+		width 360px
+	@media $iphone
+		width 310px
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip
+	@media $phone
+		display none
+#fp-nav
+	@media $phone
+		display none
+.move {
+	transform: translateY(-100%);
+}
+
+.fixedmenu {
+	transform: translateY(0);
+}
+
+.hide-menu_mob {
+	display: none;
+}
+@media only screen and (max-width: 768px) {
+	.hide-menu_mob {
+		display: block;
+		float: left;
+		position: relative;
+		z-index: 12;
+		padding: 20px 0;
+		padding-left: 43px;
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.hide-menu_mob {
+		display: block;
+		float: left;
+		position: relative;
+		z-index: 12;
+		padding: 20px 0 14px 0;
+		padding-left: 20px;
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.hide-menu_mob {
+		display: block;
+		float: left;
+		position: relative;
+		z-index: 12;
+		padding: 20px 0 14px 0;
+		padding-left: 20px;
+		font-size: 12px;
+	}
+}
+.hide-menu_mob .menu {
+	padding: 4px 0px 5px;
+	cursor: pointer;
+}
+.menu-hidden {
+	display: none;
+}
+@media only screen and (max-width: 768px) {
+	.menu-hidden {
+		display: block;
+		margin: 0;
+		position: fixed;
+		top: 41px;
+		left: 0;
+		width: 40%;
+		height: 100%;
+		padding-left: 4%;
+		background-color: rgba(18,18,20,0.8);
+		z-index: 11;
+		-webkit-transform: translateX(-500px);
+		-ms-transform: translateX(-500px);
+		transform: translateX(-500px);
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	.menu-hidden .list-hidden {
+		display: inline-block;
+		width: 100%;
+		padding-top: 10px;
+	}
+	.menu-hidden .list-hidden .item {
+		padding-left: 10px;
+		color: #ffffff;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.menu-hidden {
+		display: block;
+		margin: 0;
+		position: fixed;
+		top: 55px;
+		left: 0;
+		width: 40%;
+		height: 100%;
+		padding-left: 4%;
+		background-color: rgba(18,18,20,0.8);
+		z-index: 11;
+		-webkit-transform: translateX(-500px);
+		-ms-transform: translateX(-500px);
+		transform: translateX(-500px);
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	.menu-hidden .list-hidden {
+		display: inline-block;
+		width: 100%;
+		padding-top: 10px;
+	}
+	.menu-hidden .list-hidden .item {
+		padding-left: 10px;
+		color: #ffffff;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.menu-hidden {
+		display: block;
+		margin: 0;
+		position: fixed;
+		top: 41px;
+		left: 0;
+		width: 40%;
+		height: 100%;
+		padding-left: 4%;
+		background-color: rgba(18,18,20,0.8);
+		z-index: 11;
+		-webkit-transform: translateX(-500px);
+		-ms-transform: translateX(-500px);
+		transform: translateX(-500px);
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	.menu-hidden .list-hidden {
+		display: inline-block;
+		width: 100%;
+		padding-top: 10px;
+	}
+	.menu-hidden .list-hidden .item {
+		padding-left: 10px;
+		color: #ffffff;
+	}
+}
+.list-hidden li {
+	padding: 15px 0;
+	color: #ffffff;
+}
+.list-hidden li a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+
+.fixed_mob {
+	display: block;
+	transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transition: all 1s ease;
+	-ms-transform: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+.menu-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(18,18,20,0.7);
+}
+
+.main-page
+	height 100vh
+	background url(../img/bg.png) no-repeat
+	background-size cover
+	&__menu
+		position fixed
+		left 0
+		right 0
+		top 0
+		z-index 3
+		text-align center
+		&__img
+			float left
+			padding-top 54px
+			@media $laptop
+				padding-top 17px
+			@media $ultra
+				max-width 48px
+				padding-top 20px
+			@media $tablet
+				padding-top 17px
+				margin-left 100px
+			@media $phone
+				margin-left 30px
+		&__list
+			max-width 1200px
+			width 100%
+			margin 0 auto
+			@media $tablet
+				display none
+			&__item
+				display inline-block
+				font-size 16px
+				padding 62px 18px 35px 13px
+				@media $laptop
+					font-size 14px
+					padding 30px 15px
+				@media $ultra
+					padding 20px 6px
+					font-size 13px
+			&__link
+				cursor pointer
+				color $white
+				transition .5s
+				&:hover
+					text-decoration none
+					color $white
+				&:active
+					text-decoration none
+					color $white
+				&:visited
+					text-decoration none
+					color $white
+				&:focus
+					text-decoration none
+					color $white
+		&__lang
+			float right
+			@media $phone
+				margin-right 10px
+			&__item
+				display inline-block
+				font-weight 600
+				font-size 17px
+				padding 62px 5px 35px
+				@media $laptop
+					font-size 15px
+					padding 30px 5px 30px
+				@media $ultra
+					font-size 13px
+					padding 20px 5px 20px
+			&__link
+				cursor pointer
+				color $white
+				padding 1px 15px
+				font-weight 600
+				@media $ultra
+					padding 1px 10px
+				&:hover
+					text-decoration none
+					color $black
+					background-color $white
+					border-radius 9px
+				&:active
+					text-decoration none
+					background-color $white
+					padding 1px 15px
+					color $black
+					border-radius 9px
+				&:focus
+					text-decoration none
+					background-color $white
+					padding 1px 15px
+					color $black
+					font-weight 600
+					border-radius 9px
+
+	&__block
+		position absolute
+		top 50%
+		right 17%
+		transform translateY(-50%)
+		text-align right
+		@media $phone
+			right 5%
+		@media $iphone
+			right -2%
+		&__title
+			font-size 81px
+			font-weight 700
+			margin-bottom 16px
+			display block
+			position relative
+			@media $ultra
+				font-size 77px
+			@media $tablet
+				font-size 62px
+			@media $phone
+				font-size 35px
+			&:before
+				content url('../img/dots.png')
+				max-width 562px
+				width 100%
+				position absolute
+				top -130%
+				left -58%
+				@media $laptop
+					top -90%
+					content url('../img/dots_laptop.png')
+				@media $phone
+					content url('../img/dots_mob.png')
+				@media $ultra
+					left -55%
+				@media $tablet
+					left -87%
+					top -120%
+				@media $phone
+					left -78%
+		&__subtitle
+			text-align right
+			padding-top 24px
+			font-size 23px
+			font-weight 300
+			letter-spacing 1px
+			position relative
+			@media $ultra
+				padding-top 15px
+				font-size 20px
+			@media $tablet
+				padding-top 10px
+				font-size 18px
+				font-weight 300
+			@media $phone
+				font-size 15px
+			&:before
+				content ''
+				position absolute
+				top 0
+				right 0
+				width 250px
+				height 2px
+				background-color $white
+				@media $ultra
+					top -10px
+				@media $tablet
+					width 170px
+					height 1px
+
+#hide-menu_mob.fixed
+	background-color rgba(18,18,20,0.7)
+#menu.fixed
+	background-color rgba(18,18,20,0.7)
+#menu
+	z-index 3
+	transition top 1s ease-out 0.5s
+
+.owl-theme .owl-nav.disabled+.owl-dots
+	@media $laptop1
+		bottom 1%
+	@media $laptop
+		bottom 0%
+	@media $ultra
+		left 40%
+		bottom 8%
+	@media $tablet
+		left 40%
+		bottom 4%
+	@media $phone
+		left 50%
+		bottom 0%
+
+.owl-theme .owl-dots .owl-dot span
+	@media $laptop
+		width 13px
+		height 13px
+	@media $tablet
+		width 11px
+		height 11px
+#management .owl-theme .owl-dots .owl-dot span
+	@media $laptop
+		width 13px
+		height 13px
+	@media $tablet
+		width 11px
+		height 11px
+
+.project-slide-first
+	height 100vh
+	background-color $white
+	padding 100px 0 50px 0
+	@media $laptop
+		padding-top 70px
+	@media $ultra
+		padding-top 60px
+	@media $phone
+		padding-top 30px
+		padding-bottom 0
+	&__text
+		float left
+		position relative
+		width 50%
+		padding-left 150px
+		padding-bottom 20px
+		@media $ultra
+			padding-left 110px
+		@media $tablet
+			padding-left 60px
+		@media $phone
+			float none
+			width 95%
+			padding-left 28px
+			padding-bottom 0
+		&__title
+			margin-bottom 6px
+			font-size 33px
+			font-weight 900
+			color $black
+			@media $laptop
+				font-size 29px
+			@media $ultra
+				font-size 27px
+			@media $tablet
+				font-size 20px
+		&__info
+			padding-top 13px
+			padding-bottom 10px
+			font-size 17px
+			font-weight 600
+			color $black
+			@media $laptop
+				font-size 14px
+			@media $ultra
+				font-size 13px
+			@media $tablet
+				font-size 12px
+			@media $phone
+				padding-top 5px
+				padding-bottom 5px
+				font-size 9px
+			a
+				text-decoration underline
+				color #14a7ac
+		span
+			font-size 19px
+			font-weight 600
+			color $black
+			position relative
+			@media $laptop
+				font-size 16px
+			@media $ultra
+				font-size 15px
+			@media $tablet
+				font-size 13px
+			@media $phone
+				font-size 11px
+			&:after
+				content ''
+				position absolute
+				display block
+				bottom 10px
+				left 140px
+				width 182px
+				height 2px
+				background-color $black
+				@media $laptop
+					left 113px
+					width 152px
+					height 1px
+				@media $ultra
+					left 106px
+					width 140px
+					height 1px
+					top 32px
+				@media $tablet
+					left 88px
+					width 123px
+					height 1px
+					top 28px
+	&__graphs
+		float right
+		width 50%
+		text-align center
+		padding-top 11px
+		padding-left 62px
+		@media $tablet
+			padding-left 25px
+		@media $phone
+			padding-left 10px
+			width 100%
+			float none
+		&__first
+			display inline-block
+			width 20%
+			&__sign
+				padding-top 10px
+				font-weight 900
+				font-size 21px
+				color $black
+				@media $laptop
+					font-weight 800
+					font-size 19px
+				@media $ultra
+					font-size 17px
+				@media $tablet
+					font-size 15px
+				@media $phone
+					font-size 13px
+			p
+				color $black
+				font-size 18px
+				@media $laptop
+					font-size 16px
+				@media $ultra
+					font-size 14px
+				@media $tablet
+					font-size 11px
+				@media $iphone
+					font-size 9px
+		&__first__up
+			display block
+			margin 0 auto
+			width 22px
+			height 336px
+			background-color #14a7ac
+			@media $laptop
+				height 268px
+			@media $ultra
+				height 247px
+			@media $phone
+				width 16px
+				height 67px
+		&__first__down
+			display block
+			margin 0 auto
+			margin-bottom 34px
+			width 22px
+			height 122px
+			background-color #002f43
+			@media $laptop
+				height 98px
+			@media $ultra
+				height 92px
+			@media $phone
+				width 16px
+				height 25px
+		&__second
+			display inline-block
+			width 53%
+			@media $tablet
+				width 36%
+			@media $phone
+				width 39%
+			&__sign
+				padding-top 10px
+				font-weight 900
+				font-size 21px
+				color $black
+				@media $laptop
+					font-weight 800
+					font-size 19px
+				@media $ultra
+					font-size 17px
+				@media $tablet
+					font-size 15px
+				@media $phone
+					font-size 13px
+			p
+				color $black
+				font-size 18px
+				@media $laptop
+					font-size 16px
+				@media $ultra
+					font-size 14px
+				@media $tablet
+					font-size 11px
+				@media $iphone
+					font-size 9px
+		&__second__up
+			display block
+			margin 0 auto
+			width 22px
+			height 435px
+			background-color #14a7ac
+			@media $laptop
+				height 348px
+			@media $ultra
+				height 326px
+			@media $phone
+				width 16px
+				height 87px
+		&__second__down
+			display block
+			margin 0 auto
+			margin-bottom 34px
+			width 22px
+			height 23px
+			background-color #002f43
+			@media $laptop
+				height 18px
+			@media $ultra
+				height 15px
+			@media $phone
+				width 16px
+				height 5px
+		&__third
+			display inline-block
+			width 20%
+			@media $ultra
+				width 21%
+			@media $phone
+				width 21%
+			&__sign
+				padding-top 10px
+				font-weight 900
+				font-size 21px
+				color $black
+				@media $laptop
+					font-weight 800
+					font-size 19px
+				@media $ultra
+					font-size 17px
+				@media $tablet
+					font-size 15px
+				@media $phone
+					font-size 13px
+			p
+				color $black
+				font-size 18px
+				@media $laptop
+					font-size 16px
+				@media $ultra
+					font-size 14px
+				@media $tablet
+					font-size 11px
+				@media $iphone
+					font-size 9px
+		&__third__up
+			display block
+			margin 0 auto
+			width 22px
+			height 71px
+			background-color #14a7ac
+			@media $laptop
+				height 57px
+			@media $ultra
+				height 53px
+			@media $phone
+				width 16px
+				height 15px
+		&__third__down
+			display block
+			margin 0 auto
+			margin-bottom 34px
+			width 22px
+			height 388px
+			background-color #002f43
+			@media $laptop
+				height 311px
+			@media $ultra
+				height 290px
+			@media $phone
+				width 16px
+				height 78px
+.project-slide-second
+	height 100vh
+	padding-top 100px
+	background $white url(../img/project_logo.png) right center no-repeat
+	@media $laptop
+		padding-top 100px
+	@media $phone
+		background-size: 100%;
+		padding-top 40px
+		padding-bottom 0
+	&__text
+		float left
+		position relative
+		width 60%
+		padding-left 140px
+		@media $ultra
+			padding-left 110px
+		@media $tablet
+			padding-left 60px
+		@media $phone
+			width 90%
+			padding-left 40px
+		&__title
+			margin-bottom -5px
+			font-size 32px
+			font-weight 900
+			color $black
+			position relative
+			@media $laptop
+				font-size 29px
+			@media $ultra
+				font-size 27px
+			@media $tablet
+				font-size 24px
+			//&:after
+			//	content ''
+			//	position absolute
+			//	display block
+			//	top 24px
+			//	left 180px
+			//	width 200px
+			//	height 1px
+			//	background-color $black
+			//	@media $laptop
+			//		left 160px
+			//	@media $ultra
+			//		top 21px
+			//	@media $tablet
+			//		width 150px
+			//		top 19px
+			//		left 135px
+			//	@media $iphone
+			//		width 80px
+		&__info__first
+			padding-top 51px
+			@media $laptop
+				padding-top 20px
+				font-size 16px
+			@media $ultra
+				padding-top 10px
+				font-size 15px
+			@media $tablet
+				padding-top 10px
+				font-size 14px
+			@media $phone
+				padding-top 5px
+				font-size 12px
+			@media $iphone
+				font-size 9px
+			p
+				color $black
+				@media $laptop
+					font-size 15px
+				@media $ultra
+					font-size 14px
+				@media $tablet
+					font-size 13px
+				@media $phone
+					font-size 11px
+				@media $iphone
+					font-size 9px
+		&__info__second
+			padding-top 50px
+			font-size 17px
+			font-weight 600
+			color $black
+			line-height 19px
+			@media $laptop
+				padding-top 41px
+				font-size 15px
+			@media $ultra
+				padding-top 35px
+				font-size 14px
+			@media $tablet
+				padding-top 28px
+				font-size 13px
+			@media $phone
+				padding-top 10px
+				font-size 11px
+			@media $iphone
+				font-size 9px
+		&__info__third
+			padding-top 42px
+			font-size 17px
+			font-weight 600
+			color $black
+			line-height 19px
+			@media $laptop
+				padding-top 31px
+				font-size 15px
+			@media $ultra
+				padding-top 28px
+				font-size 14px
+			@media $tablet
+				padding-top 25px
+				font-size 13px
+			@media $phone
+				padding-top 10px
+				font-size 11px
+			@media $iphone
+				font-size 9px
+		span
+			font-size 17px
+			font-weight 800
+			color $black
+			@media $laptop
+				font-size 15px
+				font-weight 700
+			@media $tablet
+				font-size 13px
+				font-weight 700
+	&__image
+		float right
+		padding-left 31px
+		width 40%
+
+.project-slide-third
+	height 100vh
+	background $white url("../img/project_bg.png") right center no-repeat
+	background-size contain
+	@media $laptop1
+		height 115vh
+	@media $laptop
+		height 100vh
+	@media $tablet
+		background-size cover
+	@media $phone
+		background none
+	&__text
+		float left
+		position relative
+		width 60%
+		margin-top 110px
+		padding-left 140px
+		@media $ultra
+			margin-top 130px
+			padding-left 110px
+		@media $tablet
+			width 80%
+			margin-top 110px
+			padding-left 80px
+		@media $phone
+			margin-top 50px
+			padding-left 40px
+			width 90%
+		&__title
+			font-size 31px
+			font-weight 900
+			color $black
+			position relative
+			@media $laptop
+				font-size 27px
+			@media $ultra
+				font-size 22px
+			@media $phone
+				font-size 18px
+			//&:after
+			//	content ''
+			//	position absolute
+			//	display block
+			//	top 63px
+			//	left 180px
+			//	width 302px
+			//	height 2px
+			//	background-color $black
+			//	@media $laptop
+			//		top 58px
+			//		left 140px
+			//		height 1px
+			//		width 280px
+			//	@media $ultra
+			//		top 47px
+			//		left 114px
+			//		height 1px
+			//		width 226px
+			//	@media $phone
+			//		display none
+		&__info__first
+			padding-top 91px
+			font-size 17px
+			font-weight 600
+			color $black
+			line-height 19px
+			@media $laptop
+				padding-top 51px
+				font-size 16px
+			@media $ultra
+				padding-top 21px
+				font-size 14px
+			@media $tablet
+				font-size 13px
+			@media $phone
+				font-size 12px
+			@media $iphone
+				line-height 15px
+				font-size 10px
+		&__info__second
+			padding-top 20px
+			font-size 17px
+			font-weight 600
+			color $black
+			line-height 19px
+			@media $laptop
+				font-size 15px
+			@media $tablet
+				font-size 13px
+			@media $phone
+				font-size 12px
+			@media $iphone
+				line-height 15px
+				font-size 10px
+		span
+			font-size 14px
+			font-weight 800
+			color $black
+	&__image
+		float right
+		width 50%
+		img
+			height 100vh
+			
+
+.management-slide-first
+	height 100vh
+	background $black url(../img/management_bg_1.png) no-repeat
+	background-size cover
+	padding 100px 0 40px 0
+	@media $laptop
+		padding 80px 0 40px 0
+	@media $phone
+		padding 30px 0 0 20px
+	&__text
+		float right
+		position relative
+		width 50%
+		padding-left 125px
+		padding-bottom 20px
+		@media $tablet
+			padding-top 30px
+			padding-left 20px
+			padding-bottom 0px
+		@media $phone
+			float none
+			padding-top 10px
+			padding-left 10px
+			width 90%
+		@media $iphone
+			padding-left 5px
+		&__title
+			margin-bottom 10px
+			font-size 33px
+			font-weight 900
+			color $white
+			@media $laptop
+				font-size 28px
+			@media $ultra
+				font-size 26px
+			@media $tablet
+				font-size 23px
+			@media $phone
+				font-size 19px
+			@media $iphone
+				font-size 16px
+		&__info
+			padding-top 34px
+			font-size 17px
+			font-weight 500
+			color $white
+			@media $laptop
+				font-size 13px
+			@media $ultra
+				padding-top 20px
+				font-size 12px
+			@media $phone
+				font-size 9px
+				padding-top 10px
+			@media $iphone
+				font-size 8px
+	&__graphs
+		float left
+		width 50%
+		padding-top 105px
+		padding-left 140px
+		@media $laptop
+			padding-top 55px
+			padding-left 100px
+		@media $tablet
+			padding-top 120px
+			padding-left 10px
+		@media $phone
+			float none
+			width 100%
+			padding-top 0
+			padding-left 20px
+		@media $iphone
+			padding-left 10px
+		img
+			max-width 551px
+			width 100%
+			@media $laptop
+				max-width 480px
+			@media $phone
+				max-width 250px
+			@media $iphone
+				max-width 200px
+#management .owl-theme .owl-dots .owl-dot span{
+	background:#818181}
+#management .owl-theme .owl-dots .owl-dot.active span,
+#management .owl-theme .owl-dots .owl-dot:hover span{
+	background:#ffffff}
+#management .owl-theme .owl-nav.disabled+.owl-dots
+	@media $laptop1
+		bottom 1%
+	@media $laptop
+		bottom 0%
+	@media $ultra
+		left 40%
+		bottom 8%
+	@media $tablet
+		left 40%
+		bottom 4%
+	@media $phone
+		left 50%
+		bottom 0%
+.management-slide-second
+	height 100vh
+	background-image url(../img/management_bg_2.png)
+	background-size cover
+	background-color $black
+	padding 100px 0 40px 0
+	@media $laptop
+		padding 80px 0 40px 0
+	@media $phone
+		padding 20px 0 20px 0
+	@media $iphone
+		padding 10px 0
+	&__text
+		float right
+		position relative
+		width 50%
+		padding-left 125px
+		padding-bottom 20px
+		@media $tablet
+			padding-left 25px
+			padding-top 30px
+		@media $phone
+			float none
+			width 90%
+		&__title
+			margin-bottom 10px
+			font-size 33px
+			font-weight 900
+			color $white
+			position relative
+			@media $laptop
+				font-size 29px
+				font-weight 700
+			@media $ultra
+				font-size 25px
+			@media $phone
+				font-size 18px
+			&:after
+				content ''
+				position absolute
+				bottom -20px
+				left 0
+				width 187px
+				height 2px
+				background-color $white
+				@media $phone
+					bottom -3px
+					width 239px
+					height 1px
+				@media $iphone
+					width 200px
+		&__info
+			padding-top 80px
+			font-size 16px
+			letter-spacing 1px
+			font-weight 500
+			color $white
+			@media $laptop
+				padding-top 30px
+				font-size 14px
+			@media $ultra
+				font-size 13px
+			@media $phone
+				font-size 10px
+				font-weight 500
+				padding-top 10px
+	&__graphs
+		float left
+		width 50%
+		padding-top 105px
+		padding-left 140px
+		@media $laptop
+			padding-top 40px
+			padding-left 100px
+		@media $tablet
+			padding-top 90px
+			padding-left 10px
+		@media $phone
+			padding-top 10px
+			float none
+			width 100%
+		@media $iphone
+			padding-left 30px
+		img
+			max-width 551px
+			width 100%
+			@media $laptop
+				max-width 480px
+			@media $ultra
+				max-width 300px
+			@media $iphone
+				max-width 200px
+.management-slide-third
+	height 100vh
+	background-image url(../img/management_bg_3.png)
+	background-size cover
+	background-color $black
+	padding 100px 0 40px 0
+	@media $laptop
+		padding 80px 0 40px 0
+	@media $ultra
+		padding-top 80px
+	@media $phone
+		padding-top 60px
+	@media $iphone
+		padding-top 10px
+	&__text
+		float right
+		position relative
+		width 50%
+		padding-left 145px
+		padding-bottom 20px
+		@media $ultra
+			width 53%
+		@media $tablet
+			padding-left 50px
+		@media $phone
+			float none
+			width 100%
+		@media $iphone
+			padding-left 10px
+		&__title
+			margin-bottom 10px
+			font-size 33px
+			font-weight 900
+			color $white
+			@media $laptop
+				font-size 29px
+				font-weight 700
+			@media $ultra
+				font-size 27px
+				font-weight 600
+			@media $phone
+				font-size 15px
+			@media $iphone
+				font-size 14px
+				margin-bottom 0
+			&:after
+				content ''
+				position absolute
+				display block
+				top 103px
+				width 150px
+				height 2px
+				background-color $white
+				@media $phone
+					height 1px
+					top 50px
+				@media $iphone
+					display none
+		&__info
+			padding-top 38px
+			font-size 16px
+			letter-spacing 1px
+			font-weight 500
+			color $white
+			@media $laptop
+				padding-top 25px
+				font-size 13px
+			@media $phone
+				padding-top 10px
+				font-size 9px
+			@media $iphone
+				font-size 8px
+	&__graphs
+		float left
+		width 50%
+		text-align center
+		padding-top 74px
+		padding-left 228px
+		@media $laptop1
+			padding-top 20px
+		@media $laptop
+			width 47%
+			padding-top 30px
+			padding-left 150px
+		@media $tablet
+			padding-top 100px
+			padding-left 40px
+		@media $phone
+			float none
+			padding 0 0 0 100px
+		@media $iphone
+			padding-left 50px
+		img
+			max-width 451px
+			width 100%
+			@media $laptop1
+				width 400px
+			@media $laptop
+				width 360px
+			@media $ultra
+				width 320px
+			@media $tablet
+				width 280px
+			@media $phone
+				width 150px
+				padding-bottom 20px
+.data-slide-first
+	height 100vh
+	background-color $white
+	padding 100px 0
+	@media $laptop
+		padding 80px 0
+	@media $phone
+		padding 30px 0
+	&__text
+		float left
+		position relative
+		width 50%
+		padding-left 140px
+		padding-bottom 20px
+		@media $tablet
+			padding-left 40px
+		@media $phone
+			float none
+			width 90%
+		@media $iphone
+			padding-bottom 0
+		&__title
+			margin-bottom 6px
+			font-size 33px
+			font-weight 900
+			color $black
+			@media $laptop
+				font-size 29px
+				font-weight 800
+			@media $ultra
+				font-size 23px
+			@media $tablet
+				font-size 21px
+			@media $phone
+				font-size 18px
+			@media $iphone
+				font-size 14px
+			&:after
+				content ''
+				position absolute
+				display block
+				top 58px
+				width 420px
+				height 2px
+				background-color $black
+				@media $laptop
+					width 390px
+					top 50px
+				@media $ultra
+					width 320px
+				    top 40px
+				@media $tablet
+					width 309px
+					top 33px
+					height 1px
+				@media $phone
+					width 280px
+				@media $iphone
+					display none
+		&__info
+			padding-top 22px
+			padding-bottom 10px
+			font-size 15px
+			font-weight 600
+			color $black
+			@media $laptop
+				font-size 13px
+			@media $ultra
+				padding-top 15px
+				font-size 12px
+			@media $phone
+				padding-top 5px
+				font-size 9px
+			@media $iphone
+				padding-top 3px
+			a
+				text-decoration underline
+				color #14a7ac
+		span
+			font-size 19px
+			font-weight 600
+			color $black
+			&:after
+				content ''
+				position absolute
+				display block
+				top 92px
+				right 255px
+				width 182px
+				height 2px
+				background-color $black
+	&__graphs
+		float right
+		width 50%
+		text-align center
+		padding-top 15px
+		padding-left 176px
+		@media $ultra
+			padding-left 100px
+		@media $tablet
+			padding-left 50px
+		@media $phone
+			padding-left 100px
+			float none
+			width 100%
+		@media $iphone
+			padding-top 5px
+			padding-left 90px
+		img
+			max-width 439px
+			width 100%
+			@media $laptop
+				max-width 352px
+			@media $phone
+				max-width 150px
+			@media $iphone
+				max-width 120px
+.data-slide-second
+	height 100vh
+	background-color $white
+	padding 30px 0
+	@media $ultra
+		padding-left 110px
+	&__text
+		float left
+		position relative
+		width 63%
+		padding-left 140px
+		padding-bottom 20px
+		@media $tablet
+			float none
+			width 100%
+			padding-left 40px
+		@media $phone
+			width 90%
+			padding-bottom 5px
+		&__title
+			margin-bottom 6px
+			font-size 28px
+			font-weight 900
+			color $black
+			@media $laptop
+				font-size 23px
+				font-weight 800
+			@media $ultra
+				font-size 25px444
+			@media $tablet
+				font-size 22px
+			@media $phone
+				font-size 18px
+			@media $iphone
+				font-size 15px
+			//&:after
+			//	content ''
+			//	position absolute
+			//	display block
+			//	top 58px
+			//	width 420px
+			//	height 2px
+			//	background-color $black
+			//	@media $laptop
+			//		width 385px
+			//	@media $ultra
+			//		width 345px
+			//		top 45px
+			//	@media $tablet
+			//		width 300px
+			//		top 37px
+			//		height 1px
+			//	@media $phone
+			//		width 250px
+		&__info__first
+			padding-top 5px
+			font-size 15px
+			font-weight 600
+			color $black
+			@media $laptop
+				font-size 13px
+			@media $ultra
+				font-size 12px
+			@media $tablet
+				padding-top 25px
+			@media $phone
+				padding-top 20px
+				font-size 10px
+			@media $iphone
+				font-size 8px
+		&__info__second
+			padding-top 5px
+			font-size 13px
+			font-weight 600
+			color $black
+			@media $laptop
+				font-size 12px
+			@media $ultra
+				font-size 11px
+			@media $phone
+				font-size 9px
+			@media $iphone
+				font-size 7px
+		&__info__third
+			padding-top 7px
+			font-size 13px
+			font-weight 600
+			color $black
+			@media $laptop
+				font-size 12px
+			@media $ultra
+				font-size 11px
+			@media $phone
+				font-size 9px
+			@media $iphone
+				font-size 7px
+		span
+			font-size 16px
+			font-weight 600
+			color $black
+			&:after
+				content ''
+				position absolute
+				display block
+				top 92px
+				right 255px
+				width 182px
+				height 2px
+				background-color $black
+	&__image
+		float right
+		width 35%
+		margin-right -20px
+		padding-left 65px
+		@media $tablet
+			margin-right 0
+			text-align center
+			float none
+			width 100%
+		@media $tablet
+			display none
+		h2
+			padding-left 35px
+			padding-top 20px
+			font-size 23px
+			font-weight 900
+			color $black
+			@media $laptop
+				font-size 20px
+			@media $ultra
+				padding-left 50px
+				font-size 18px
+			@media $tablet
+				font-size 18px
+			@media $phone
+				padding-top 10px
+				font-size 15px
+				padding-left 0px
+			@media $iphone
+				font-size 12px
+		h4
+			padding-top 15px
+			padding-left 82px
+			padding-bottom 26px
+			font-weight 900
+			font-size 15px
+			color $black
+			@media $ultra
+				font-size 14px
+				padding-left 80px
+			@media $tablet
+				padding 15px 0 10px 60px
+			@media $phone
+				font-size 11px
+				padding 10px 0 3px 0px
+		&__block
+			margin-left -100px
+			font-weight 900
+			font-size 17px
+			color $black
+			@media $tablet
+				margin-left 0
+				padding-left 50px
+			@media $phone
+				padding-left 5px
+			@media $iphone
+				font-size 14px
+			span
+				padding 5px
+				margin 0 5px
+				border-radius 5px
+				font-size 15px
+				background-color #14a8ac
+				font-weight 500
+				color $white
+				@media $laptop
+					font-size 13px
+				@media $ultra
+					margin 0 3px
+					padding 4px 10px
+					font-size 12px
+				@media $phone
+					margin 0 1px
+					padding 2px 3px
+					font-size 9px
+				@media $iphone
+					font-size 7px
+		p
+			padding-top 60px
+			margin-left -40px
+			font-size 16px
+			font-weight 600
+			color $black
+			@media $laptop
+				font-size 14px
+			@media $ultra
+				margin-left -65px
+			@media $tablet
+				margin-left 0
+				padding-top 10px
+				padding-left 45px
+			@media $phone
+				font-size 10px
+				padding-left 10px
+.data-slide-third
+	height 100vh
+	background-color $white
+	padding 100px 0
+	@media $ultra
+		padding 80px 0
+	@media $phone
+		padding 30px 0
+	&__text
+		float left
+		position relative
+		width 100%
+		padding-left 100px
+		@media $tablet
+			padding-left 40px
+		@media $phone
+			width 90%
+		&__title
+			font-size 33px
+			font-weight 900
+			color $black
+			position relative
+			@media $laptop
+				font-size 29px
+				font-weight 800
+			@media $ultra
+				font-size 26px
+			@media $tablet
+				font-size 20px
+			@media $phone
+				font-size 18px
+			//&:after
+			//	content ''
+			//	position absolute
+			//	display block
+			//	top: 70px;
+			//	right: -38%;
+			//	width: 100%;
+			//	height 2px
+			//	background-color $black
+			//	@media $laptop
+			//		top 63px
+			//	@media $ultra
+			//		top 56px
+			//		right -43%
+			//	@media $tablet
+			//		top 43px
+			//		right -47%
+			//		height 1px
+			//	@media $phone
+			//		display none
+		&__info__first
+			padding-top 41px
+			font-size 17px
+			font-weight 600
+			color $black
+			line-height 19px
+			@media $laptop
+				padding-top 31px
+				font-size 15px
+			@media $ultra
+				padding-top 28px
+				font-size 14px
+			@media $tablet
+				font-size 13px
+			@media $phone
+				padding-top 10px
+				font-size 12px
+				line-height 11px
+		&__info__second
+			padding-top 28px
+			font-size 17px
+			font-weight 700
+			color $black
+			line-height 19px
+			@media $laptop
+				padding-top 31px
+				font-size 15px
+			@media $ultra
+				padding-top 28px
+				font-size 14px
+			@media $tablet
+				font-size 13px
+			@media $phone
+				padding-top 10px
+				font-size 11px
+				line-height 11px
+	&_block
+		clear both
+		display block
+		padding-top 200px
+		@media $laptop
+			padding-top 130px
+			padding-left 100px
+		@media $tablet
+			padding-left 40px
+		@media $iphone
+			padding-left 10px
+	&_line
+		width 100%
+		height 3px
+		background-color #013447
+	&_line-box
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+			animation-name blink
+			animation-duration 1.4s
+			animation-iteration-count infinite
+			animation-fill-mode both
+	&_line-box-1
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+	&_line-box-2
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+	&_line-box-3
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+	&_line-box-4
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+	&_line-box-5
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+	&_line-box-6
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+	&_line-box-7
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+	&_line-box-8
+		float left
+		width 11%
+		height 3px
+		&:before
+			content ''
+			display block
+			width 17px
+			height 17px
+			transform translate(-10px, -7px)
+			border-radius 50%
+			border 2px solid $white
+			background-color #013447
+	&_info-box
+		width: 150px;
+		position: relative;
+		top: -120px;
+		right: -76px;
+		@media $laptop1
+			right -76px
+		@media $laptop
+			right -51px
+		@media $ultra
+			right -19px
+		@media $tablet
+			right -1%
+		@media $phone
+			right 133%
+		@media $iphone
+			right 154%
+	&_info-number
+		width: 50px;
+		opacity 1
+		margin: 25px auto 0;
+		padding: 12px 9px 12px 12px;
+		font-size 12px
+		border-radius: 50%;
+		color: #fff;
+		background-color: #013447;
+		position relative
+		@media $phone
+			font-size 11px
+			width 35px
+			padding 8px 0px 8px 6px
+		@media $iphone
+			padding-left 4px
+		&:after
+			content ''
+			position: absolute;
+			bottom: -42px;
+			left: 24px;
+			width: 2px;
+			height: 40px;
+			background-image (linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(92,125,137,1) 34%, rgba(1,52,71,1) 53%, rgba(1,52,71,1) 100%));
+			@media $phone
+				left 18px
+	&_info-data
+		// opacity 0
+		display none
+		position: absolute;
+		top: -30px;
+		background-color: #013447;
+		color: #fff;
+		font-size: 11px;
+		padding: 8px 10px 14px;
+		&__span-one
+			position relative
+			display block
+			&:before
+				content ''
+				position absolute
+				top 7px
+				right 0
+				height 1px
+				width 80px
+				background-color $white
+			&:after
+				content ''
+				position absolute
+				bottom -24px
+				left 50%
+				transform translateX(-50%)
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 10px solid #013447;
+		&__span-two
+			position relative
+			display block
+			&:before
+				content ''
+				position absolute
+				top 7px
+				right 0
+				height 1px
+				width 80px
+				background-color $white
+			&:after
+				content ''
+				position absolute
+				bottom -24px
+				left 50%
+				transform translateX(-50%)
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 10px solid #013447;
+		&__span-three
+			position relative
+			display block
+			&:before
+				content ''
+				position absolute
+				top 7px
+				right 0
+				height 1px
+				width 80px
+				background-color $white
+			&:after
+				content ''
+				position absolute
+				bottom -24px
+				left 50%
+				transform translateX(-50%)
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 10px solid #013447;
+		&__span-four
+			position relative
+			display block
+			&:before
+				content ''
+				position absolute
+				top 7px
+				right 0
+				height 1px
+				width 80px
+				background-color $white
+			&:after
+				content ''
+				position absolute
+				bottom -24px
+				left 50%
+				transform translateX(-50%)
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 10px solid #013447;
+.data-slide-third_line
+	width 100%
+	@media $laptop
+		width 110%
+	@media $ultra
+		width 100%
+.data-slide-third_line-box-1
+	.data-slide-third_info-number
+		background-color #013447
+		&:after
+			background-color #013447
+	.data-slide-third_info-data
+		background-color #013447
+
+.data-slide-third_line-box-2
+	.data-slide-third_info-number
+		background-color #013447
+		&:after
+			background-color #013447
+	.data-slide-third_info-data
+		background-color #013447
+
+.data-slide-third_line-box-3
+	.data-slide-third_info-number
+		background-color #013447
+		&:after
+			background-color #013447
+	.data-slide-third_info-data
+		background-color #013447
+
+.data-slide-third_line-box-4
+	.data-slide-third_info-number
+		background-color #013447
+		&:after
+			background-color #013447
+	.data-slide-third_info-data
+		background-color #013447
+
+.data-slide-third_line-box-5
+	.data-slide-third_info-number
+		background-color #013447
+		&:after
+			background-color #013447
+	.data-slide-third_info-data
+		background-color #013447
+
+.data-slide-third_line-box-7
+.data-slide-third_info-number
+	background-color #013447
+	&:after
+		background-color #013447
+.data-slide-third_info-data
+	background-color #013447
+
+.data-slide-third_line-box-8
+	.data-slide-third_info-number
+		background-color #013447
+		&:after
+			background-color #013447
+	.data-slide-third_info-data
+		background-color #013447
+
+.opacityShow
+	display block !important
+	opacity 1 !important
+	z-index 100
+
+.opacityHide
+	// display none
+	opacity 0 !important
+	z-index 99
+
+show
+	display block
+
+#team
+	background-color $white
+
+.current a
+	border-radius 20px
+	background-color #414143
+	color $white
+	font-weight 900
+	text-decoration none
+	@media $ultra
+		font-size 13px
+	@media $tablet
+		font-size 11px
+	@media $phone
+		font-size 10px
+
+#team .owl-theme .owl-dots .owl-dot {
+	display: none;
+}
+#team .owl-carousel .owl-nav.disabled {
+	display: block;
+	width: 70%;
+}
+#team .owl-carousel .owl-nav.disabled
+	@media $laptop
+		width 83%
+	
+#team .owl-theme .owl-nav .owl-prev {
+	float: left;
+	color: transparent;
+	font-size: 14px;
+	margin: 5px;
+	padding: 4px 7px;
+	background: $white url(../img/right-arrow.svg) right center no-repeat;
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+#team .owl-theme .owl-nav .owl-prev
+	margin-left 35px
+
+#team .owl-theme .owl-nav .owl-next {
+	color: transparent;
+	float: right;
+	font-size: 14px;
+	margin: 5px;
+	margin-left: 90px;
+	padding: 4px 7px;
+	background: $white url(../img/right-arrow.svg) right center no-repeat;
+	display: inline-block;
+	cursor: pointer;
+}
+#team .owl-theme .owl-nav .owl-next
+	@media $laptop
+		margin-left 200px
+	@media $tablet
+		margin-left 125px
+	@media $phone
+		margin-left 100px
+	@media $iphone
+		margin-left 70px
+
+.team
+	height 100vh
+	padding 0
+	@media $laptop
+		padding 0
+	@media $phone
+		height auto
+	&__slider
+		float left
+		padding 140px 0 0 220px
+		@media $laptop
+			padding-top 90px
+			padding-left 200px
+		width 50%
+		@media $ultra
+			padding-left 100px
+		    padding-top 70px
+		@media $tablet
+			padding-top 120px
+			padding-left 36px
+		@media $phone
+			float none
+			width 95%
+			padding-top 40px
+		&__tabs
+			display inline-block
+			text-align center
+			padding 10px
+			&__link
+				color #414143
+				padding 10px
+				font-weight 900
+				width 40%
+				@media $ultra
+					font-size 13px
+				@media $tablet
+					font-size 11px
+				@media $phone
+					padding 3px
+					font-size 10px
+				&:hover
+					border-radius 20px
+					background-color #414143
+					color $white
+					font-weight 900
+					text-decoration none
+				&:focus
+					border-radius 20px
+					background-color #414143
+					color $white
+					font-weight 900
+					text-decoration none
+				&:active
+					border-radius 20px
+					background-color #414143
+					color $white
+					font-weight 900
+					text-decoration none
+		&__info__block
+			width 70%
+			border 5px solid #414143
+			margin-top 75px
+			padding 30px 20px
+			@media $laptop1
+				margin-left 25px
+			@media $laptop
+				width 85%
+				margin-top 20px
+				padding 15px 15px 30px 15px
+				margin-left 25px
+			@media $ultra
+				padding-bottom 40px
+				margin-left 25px
+			img
+				float left
+				max-width 123px
+				width 100%
+				@media $laptop
+					max-width 100px
+				@media $tablet
+					max-width 80px
+			&__first
+				margin-top -15px
+				padding-left 150px
+				font-size 19px
+				font-weight 900
+				color #414143
+				@media $laptop
+					padding-top 10px
+					font-size 16px
+				@media $ultra
+					padding-left 130px
+					font-size 14px
+				@media $tablet
+					padding-left 100px
+			&__second
+				padding-top 20px
+				padding-left 150px
+				padding-bottom 30px
+				font-size 15px
+				color #414143
+				@media $ultra
+					padding-top 10px
+					padding-left 130px
+					font-size 13px
+				@media $tablet
+					padding-left 100px
+			&__third
+				clear both
+				padding-top 30px
+				font-size 15px
+				color #414143
+				@media $ultra
+					padding-top 15px
+					font-size 13px
+			&__fourth
+				position relative
+				padding-top 10px
+				font-size 15px
+				color #414143
+				@media $ultra
+					font-size 13px
+				@media $phone
+					font-size 12px
+				&:after
+					content ''
+					position absolute
+					top 90px
+					left 0
+					height 5px
+					width 135px
+					background-color #414143
+					@media $laptop
+						top 75px
+						height 3px
+					@media $ultra
+						top 60px
+						height 2px
+			&__fifth
+				padding-top 70px
+				padding-bottom 40px
+				font-size 15px
+				color #414143
+				@media $laptop
+					padding-top 50px
+					padding-bottom 20px
+				@media $ultra
+					font-size 13px
+					padding-top 30px
+					padding-bottom 10px
+	&__info
+		float right
+		height 100vh
+		width 50%
+		background-color $black
+		background-image url(../img/dots_team.png)
+		background-size cover
+		@media $phone
+			float none
+			width 100%
+		&__text__title
+			position relative
+			padding-top 100px
+			padding-left 136px
+			font-size 33px
+			font-weight 900
+			color $white
+			@media $laptop
+				padding-left 100px
+				padding-top: 80px
+			@media $ultra
+				font-size 27px
+				padding-left 80px
+				padding-top 80px
+			@media $tablet
+				padding-top 130px
+				padding-left 65px
+				font-size 20px
+			@media $phone
+				margin-top 60px
+			&:after
+				content ''
+				position absolute
+				display block
+				bottom 18px
+				right 110px
+				width 380px
+				height 2px
+				background-color $white
+				@media $laptop1
+					width 280px
+				@media $laptop
+					right 0
+					width 280px
+				@media $ultra
+					width 280px
+				@media $tablet
+					width 200px
+					height 1px
+					top 145px
+				@media $phone
+					width 170px
+				@media $iphone
+					width 110px
+		&__text__info
+			padding-top 180px
+			padding-left 140px
+			font-size 17px
+			font-weight 600
+			color $white
+			@media $laptop
+				padding-top 80px
+				padding-left 100px
+				font-size 15px
+				font-weight 500
+			@media $ultra
+				font-size 14px
+				padding-left 80px
+			@media $tablet
+				font-size 13px
+				padding-left 40px
+				padding-top 40px
+				padding-right 10px
+			@media $phone
+				padding 40px 30px 0
+.docs
+	float left
+	clear both
+	width 50%
+	padding 60px 0 60px 210px
+	background-color $black
+	height 90vh
+	@media $laptop
+		padding 50px 0 40px 180px
+	@media $ultra
+		padding 40px 0 40px 110px
+	@media $tablet
+		padding 40px 0 40px 60px
+	@media $phone
+		margin-top -180px
+		padding 30px
+		float none
+		width 100%
+	@media $iphone
+		margin-top -50px
+	img
+		max-width 48px
+		width 100%
+		@media $laptop
+			max-width 35px
+		@media $ultra
+			max-width 29px
+	h3
+		font-size 35px
+		position relative
+		@media $laptop
+			font-size 27px
+		@media $ultra
+			font-size 23px
+		@media $tablet
+			font-size 19px
+		@media $phone
+			padding-left 35px
+		&:after
+			content ''
+			position absolute
+			height 2px
+			width 220px
+			right 0
+			top 27px
+			background-color $white
+			@media $laptop1
+				width 220px
+			@media $laptop
+				width 220px
+				top 20px
+			@media $ultra
+				width 160px
+				top 19px
+			@media $tablet
+				width 160px
+				top 13px
+				height 1px
+			@media $phone
+				right -30px
+				width 140px
+			@media $iphone
+				width 80px
+	&__block
+		padding-top 37px
+		@media $laptop
+			padding-top 35px
+		@media $phone
+			padding-top 20px
+	&__block__title
+		font-size 20px
+		font-weight 600
+		margin-top -70px
+		margin-left 70px
+		@media $laptop
+			font-size 17px
+			margin-top -52px
+			margin-left 50px
+		@media $ultra
+			font-size 15px
+			margin-top -42px
+			margin-left 42px
+	&__block__link
+		font-size 15px
+		font-weight 600
+		margin-left 70px
+		color #14a7ac
+		text-decoration none
+		cursor pointer
+		@media $laptop
+			font-size 14px
+			margin-left 50px
+		@media $ultra
+			margin-left 41px
+		&:hover
+			text-decoration none
+			color #14a7ac
+		&:visited
+			text-decoration none
+			color #14a7ac
+	&__block__info
+		padding-top 30px
+		font-size 17px
+		@media $laptop
+			padding-top 27px
+			font-size 15px
+		@media $ultra
+			padding-top 15px
+			font-size 13px
+		@media $iphone
+			font-size 10px
+.press
+	float right
+	width 50%
+	padding 60px 0 60px 60px
+	background-color $white
+	height 90vh
+	@media $laptop
+		padding 50px 0 40px 60px
+	@media $ultra
+		padding 40px 0 40px 40px
+	@media $tablet
+		padding	40px 0 40px 30px
+	@media $phone
+		padding 20px
+		float none
+		width 100%
+	img
+		max-width 64px
+		width 100%
+		@media $laptop
+			max-width 50px
+		@media $ultra
+			max-width 45px
+	h3
+		font-size 35px
+		color $black
+		position relative
+		@media $laptop
+			font-size 27px
+		@media $ultra
+			font-size 25px
+		@media $tablet
+			font-size 23px
+	&__block
+		padding-top 35px
+		@media $laptop
+			padding-top 35px
+		@media $ultra
+			padding-top 25px
+	&__block__title
+		font-size 20px
+		font-weight 800
+		margin-top -67px
+		margin-left 80px
+		color $black
+		@media $laptop
+			margin-top -52px
+			font-size 18px
+		@media $ultra
+			font-size 16px
+			margin-top -45px
+	&__block__link__empty
+		font-size 15px
+		font-weight 800
+		margin-left 80px
+		color #414143
+		text-decoration none
+		@media $laptop
+			font-size 13px
+		&:hover
+			text-decoration none
+			color #414143
+	&__block__link
+		font-size 15px
+		font-weight 800
+		margin-left 80px
+		color #14a7ac
+		text-decoration none
+		cursor pointer
+		@media $laptop
+			font-size 13px
+		&:hover
+			text-decoration none
+			color #14a7ac
+	&__block__info
+		padding 10px 0
+		font-weight 600
+		margin-left 80px
+		font-size 17px
+		color $black
+		@media $laptop
+			font-size 15px
+		@media $ultra
+			padding 5px 0
+			font-size 13px
+		@media $phone
+			font-size 11px
+		@media $iphone
+			font-size 10px
+.footer
+	padding 30px 0
+	height 10vh
+	background-color $black
+	clear both
+	text-align center
+	@media $laptop
+		padding 10px 0
+	&__email
+		float left
+		position relative
+		padding-left 50px
+		padding-top 3px
+		@media $laptop
+			padding-left 38px
+			padding-top 8px
+		@media $ultra
+			font-size 13px
+		@media $phone
+			padding-left 0px
+			font-size 10px
+		@media $iphone
+			font-size 7px
+		&:before
+			content url(../img/letter.png)
+			position absolute
+			top 0
+			left 0
+			@media $laptop
+				content url(../img/letter_laptop.png)
+				top 8px
+			@media $phone
+				//content url(../img/letter_mob.png)
+				//top 8px
+				//left -33px
+				display none
+	&__social_media
+		&__img
+			display inline-block
+			padding 17px 0px
+			max-width 50px
+			width 100%
+			@media $tablet
+				max-width 40px
+			@media $phone
+				margin-top 7px
+				max-width 20px
+		.facebook
+			background url(../img/facebook.png) no-repeat
+			@media $phone
+				background url(../img/facebook_sm.png) no-repeat
+			&:hover
+				background url(../img/facebook_sprite.png) no-repeat
+				@media $phone
+					background url(../img/facebook_sprite_sm.png) no-repeat
+		.twitter
+			background url(../img/twitter.png) no-repeat
+			@media $phone
+				background url(../img/twitter_sm.png) no-repeat
+			&:hover
+				background url(../img/twitter_sprite.png) no-repeat
+				@media $phone
+					background url(../img/twitter_sprite_sm.png) no-repeat
+		.vk
+			background url(../img/vk.png) no-repeat
+			@media $phone
+				background url(../img/vk_sm.png) no-repeat
+			&:hover
+				background url(../img/vk_sprite.png) no-repeat
+				@media $phone
+					background url(../img/vk_sprite_sm.png) no-repeat
+		.youtube
+			background url(../img/youtube.png) no-repeat
+			@media $phone
+				background url(../img/youtube_sm.png) no-repeat
+			&:hover
+				background url(../img/youtube_sprite.png) no-repeat
+				@media $phone
+					background url(../img/youtube_sprite_sm.png) no-repeat
+		.linkedin
+			background url(../img/linkedin.png) no-repeat
+			@media $phone
+				background url(../img/linkedin_sm.png) no-repeat
+			&:hover
+				background url(../img/linkedin_sprite.png) no-repeat
+				@media $phone
+					background url(../img/linkedin_sprite_sm.png) no-repeat
+	&__rights
+		float right
+		@media $laptop
+			padding-top 8px
+		@media $ultra
+			font-size 13px
+		@media $phone
+			font-size 9px
+			margin-right 4px
+		@media $phone
+			font-size 7px
+.after_contact {
+	display: none;
+	position: fixed;
+	z-index: 6669999998 !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $black url(../img/ball-triangle.svg) center no-repeat;
+	background-size: 70px;
+}
+#fp-nav ul li:nth-child(2) .fp-tooltip
+	color $black
+#fp-nav ul li:nth-child(4) .fp-tooltip
+	color $black
+#fp-nav ul li:nth-child(5) .fp-tooltip
+	color $black
+.tabs_ul
+	@media $laptop
+		padding-left 30px
+#block
+	margin-left 23px
+	@media $ultra
+		font-size 12px
+	@media $tablet
+		margin-left 0
+		padding-left 50px
+	@media $phone
+		padding-left 5px
+	@media $iphone
+		font-size 14px
+#block-1
+	margin-left -40px
+	@media $ultra
+		font-size 12px
+	@media $tablet
+		margin-left 0
+		padding-left 50px
+	@media $phone
+		padding-left 5px
+	@media $iphone
+		font-size 14px
+@keyframes blink {
+	/**
+	 * At the start of the animation the dot
+	 * has an opacity of .2
+	 */
+	0% {
+		opacity: 0;
+		width: 17px;
+		height: 17px;
+	}
+	/**
+	 * At 20% the dot is fully visible and
+	 * then fades out slowly
+	 */
+	50% {
+		opacity: 0;
+		width: 25px;
+		height: 25px;
+	}
+	/**
+	 * Until it reaches an opacity of .2 and
+	 * the animation can start again
+	 */
+	100% {
+		opacity: 0;
+		width: 17px;
+		height: 17px;
+	}
+}
